@@ -12,6 +12,7 @@ option (gogoproto.unmarshaler_all) = true;
 
 service PermissionService {
   rpc HasPermission (HasPermissionRequest) returns (HasPermissionResponse);
+  rpc ListResourcePatterns (ListResourcePatternsRequest) returns (ListResourcePatternsResponse);
 }
 
 message HasPermissionRequest {
@@ -22,4 +23,13 @@ message HasPermissionRequest {
 
 message HasPermissionResponse {
   bool has_permission = 1;
+}
+
+message ListResourcePatternsRequest {
+  Actor actor = 1;
+  string permission_name = 2;
+}
+
+message ListResourcePatternsResponse {
+  repeated string resource_patterns = 1;
 }
