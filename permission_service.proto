@@ -22,14 +22,22 @@ message HasPermissionRequest {
 }
 
 message HasPermissionResponse {
-  bool has_permission = 1;
+  bool has_permission = 5;
 }
 
 message ListResourcePatternsRequest {
-  Actor actor = 1;
-  string permission_name = 2;
+  message Page {
+    uint32 limit = 1;
+    string starting_after = 2;
+  }
+
+  Page page = 1;
+  Actor actor = 2;
+  string permission_name = 3;
 }
 
 message ListResourcePatternsResponse {
-  repeated string resource_patterns = 1;
+  reserved 1; // for pagination metadata
+
+  repeated string resource_patterns = 2;
 }
