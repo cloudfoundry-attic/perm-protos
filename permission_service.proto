@@ -22,7 +22,7 @@ message HasPermissionRequest {
 }
 
 message HasPermissionResponse {
-  bool has_permission = 5;
+  bool has_permission = 1;
 }
 
 message ListResourcePatternsRequest {
