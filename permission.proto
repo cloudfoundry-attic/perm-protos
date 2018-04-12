@@ -10,6 +10,6 @@ option (gogoproto.sizer_all) = true;
 option (gogoproto.unmarshaler_all) = true;
 
 message Permission {
-  string name = 1;
+  string action = 1;
   string resource_pattern = 2;
 }
