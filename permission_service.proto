@@ -27,7 +27,7 @@ message HasPermissionResponse {
 
 message ListResourcePatternsRequest {
   Actor actor = 1;
-  string permission_name = 2;
+  string action = 2;
 }
 
 message ListResourcePatternsResponse {
