@@ -10,5 +10,7 @@ option (gogoproto.sizer_all) = true;
 option (gogoproto.unmarshaler_all) = true;
 
 message Role {
+  reserved 1; // for uuid
+
   string name = 2;
 }

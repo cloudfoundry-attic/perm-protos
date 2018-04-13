@@ -26,10 +26,14 @@ message HasPermissionResponse {
 }
 
 message ListResourcePatternsRequest {
-  Actor actor = 1;
-  string action = 2;
+  reserved 1; // for pagination;
+
+  Actor actor = 2;
+  string action = 3;
 }
 
 message ListResourcePatternsResponse {
-  repeated string resource_patterns = 1;
+  reserved 1; // for pagination metadata
+
+  repeated string resource_patterns = 2;
 }

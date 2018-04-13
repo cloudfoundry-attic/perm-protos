@@ -10,6 +10,8 @@ option (gogoproto.sizer_all) = true;
 option (gogoproto.unmarshaler_all) = true;
 
 message Actor {
+  reserved 1; // for uuid
+
   string id = 2 [(gogoproto.customname) = "ID"];
   string namespace = 3;
 }

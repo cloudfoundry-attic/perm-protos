@@ -73,17 +73,25 @@ message HasRoleResponse {
 }
 
 message ListActorRolesRequest {
-  Actor actor = 1;
+  reserved 1; // for pagination
+
+  Actor actor = 2;
 }
 
 message ListActorRolesResponse {
+  reserved 1; // for pagination metadata
+
   repeated Role roles = 1;
 }
 
 message ListRolePermissionsRequest {
-  string role_name = 1;
+  reserved 1; // for pagination
+
+  string role_name = 2;
 }
 
 message ListRolePermissionsResponse {
-  repeated Permission permissions = 1;
+  reserved 1; // for pagination metadata
+
+  repeated Permission permissions = 2;
 }
