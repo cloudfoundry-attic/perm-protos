@@ -81,7 +81,7 @@ message ListActorRolesRequest {
 message ListActorRolesResponse {
   reserved 1; // for pagination metadata
 
-  repeated Role roles = 1;
+  repeated Role roles = 2;
 }
 
 message ListRolePermissionsRequest {
